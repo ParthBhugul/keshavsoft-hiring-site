@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Join KeshavSoft – Apply for developer roles, track applications, and take coding challenges.">
-<meta name="author" content="Parth Bhugul">
+  <meta name="author" content="Parth Bhugul">
 
   <title>Contact - KeshavSoft</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -73,13 +72,13 @@
     <div class="form-container">
       <h2>Contact Us</h2>
       <div class="container text-center">
-        <p class="lead" style="opacity: 0.75; max-width: 700px; margin: 0 auto;">We’d love to hear from you. Please fill out the form below to get in touch.
+        <p class="lead" style="opacity: 0.75; max-width: 700px; margin: 0 auto;">
+          We’d love to hear from you. Please fill out the form below to get in touch.
         </p>
       </div>
       
       <!-- Contact Form -->
       <form id="contactForm" onsubmit="handleContactSubmit(event)">
-
         <div class="mb-3">
           <label for="name" class="form-label">Your Name *</label>
           <input type="text" class="form-control" id="name" required />
@@ -154,160 +153,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Join KeshavSoft – Apply for developer roles, track applications, and take coding challenges.">
-<meta name="author" content="Parth Bhugul">
-
-  <title>Contact - KeshavSoft</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --accent-color: #E8BB46;
-      --highlight-color: #7A4E2D;
-    }
-    body {
-      background-color: #0d0d0d;
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding-bottom: 3rem;
-    }
-    .form-container {
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      padding: 2rem;
-      margin-top: 3rem;
-      box-shadow: 0 0 20px rgba(232, 187, 70, 0.1);
-    }
-    .form-control, .form-select {
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #555;
-    }
-    .form-label {
-      color: #ccc;
-    }
-    .btn-accent {
-      background-color: var(--accent-color);
-      color: #000;
-      font-weight: 600;
-      border: none;
-    }
-    .btn-accent:hover {
-      background-color: var(--highlight-color);
-      color: #fff;
-    }
-    h2 {
-      color: var(--accent-color);
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    #contactFeedback {
-      display: none;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-  </style>
-</head>
-<body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-    <a class="navbar-brand" href="index.html">KeshavSoft</a>
-    <div class="ms-auto">
-      <a href="index.html" class="btn btn-outline-light btn-sm">← Home</a>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="form-container">
-      <h2>Contact Us</h2>
-      <div class="container text-center">
-        <p class="lead" style="opacity: 0.75; max-width: 700px; margin: 0 auto;">We’d love to hear from you. Please fill out the form below to get in touch.
-        </p>
-      </div>
-      
-      <!-- Contact Form -->
-      <form id="contactForm" onsubmit="handleContactSubmit(event)">
-
-        <div class="mb-3">
-          <label for="name" class="form-label">Your Name *</label>
-          <input type="text" class="form-control" id="name" required />
-        </div>
-
-        <div class="mb-3">
-          <label for="email" class="form-label">Email Address *</label>
-          <input type="email" class="form-control" id="email" required />
-        </div>
-
-        <div class="mb-3">
-          <label for="subject" class="form-label">Subject *</label>
-          <select class="form-select" id="subject" required>
-            <option value="">Select a Subject</option>
-            <option value="Support">Support</option>
-            <option value="Hiring">Hiring</option>
-            <option value="Feedback">Feedback</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="message" class="form-label">Message *</label>
-          <textarea class="form-control" id="message" rows="4" required></textarea>
-        </div>
-
-        <div class="text-center">
-          <button type="submit" class="btn btn-accent">Send Message</button>
-        </div>
-      </form>
-
-      <!-- Dynamic Feedback -->
-      <div id="contactFeedback" class="alert alert-info mt-4 text-center"></div>
-    </div>
-  </div>
-
-  <script>
-    function handleContactSubmit(event) {
-      event.preventDefault();
-
-      const subject = document.getElementById("subject").value;
-      const feedbackBox = document.getElementById("contactFeedback");
-      const form = document.getElementById("contactForm");
-
-      let message = "";
-      switch(subject) {
-        case "Support":
-          message = " Thank you! Our support team will reach out to you shortly.";
-          break;
-        case "Hiring":
-          message = " Thank you for your interest in hiring. Our recruitment team will contact you soon!";
-          break;
-        case "Feedback":
-          message = " We appreciate your feedback! It helps us improve.";
-          break;
-        case "Other":
-          message = " Thank you for contacting us. We’ll get back to you as soon as possible.";
-          break;
-        default:
-          message = " Message sent successfully!";
-      }
-
-      form.style.display = "none";
-      feedbackBox.innerText = message;
-      feedbackBox.style.display = "block";
-      setTimeout(() => {
-        feedbackBox.style.opacity = 1;
-      }, 100);
-    }
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
->>>>>>> f66d5d9d2367e56e7af1d54dd1e1c197cd21bd0b
