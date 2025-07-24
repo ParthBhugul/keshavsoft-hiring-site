@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Join KeshavSoft – Apply for developer roles, track applications, and take coding challenges.">
+<meta name="author" content="Parth Bhugul">
+
+  <title>KeshavSoft Hiring Proposal</title>
+
+  <!-- Bootstrap & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --accent-color: #E8BB46;
+      --highlight-color: #7A4E2D;
+      --glow: rgba(232, 187, 70, 0.4);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      transition: background-color 1s ease;
+    }
+
+    /* Page load animation setup */
+    .navbar,
+    .hero-section,
+    footer {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    body.loaded .navbar,
+    body.loaded .hero-section,
+    body.loaded footer {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 1s ease ease-in-out;
+    }
+
+    .navbar {
+      background-color: #000;
+    }
+
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--accent-color) !important;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .hero-section {
+      background: url('checkpattern.webp') center center / cover no-repeat;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    h1.display-3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      animation: fadeSlideDown 1s ease forwards;
+    }
+
+    p.lead {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      color: #ddd;
+      animation: fadeSlideUp 1.2s ease forwards;
+    }
+
+    .text-accent {
+      color: var(--accent-color);
+    }
+
+    .btn-accent {
+      background-color: var(--accent-color);
+      border: none;
+      color: #000;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 0 transparent;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn-accent:hover {
+      background-color: var(--highlight-color);
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px var(--glow), 0 0 20px var(--glow);
+    }
+    /* Coding Challenge Section Styles */
+.challenge-section {
+  position: relative;
+  min-height: 100vh;
+  background: url('abstract-digital.jpg') center center / cover no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animation Trigger Class */
+.challenge-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.challenge-section .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.challenge-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+    footer {
+      background-color: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    @keyframes fadeSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="https://keshavsoft.com/" target="_blank" rel="noopener">KeshavSoft</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="recruitment.html">Recruitment</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#codingChallenge">Coding Challenge</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+     
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Hero Section -->
+  <main class="hero-section">
+    <div class="hero-content">
+      <h1 class="display-3">WELCOME TO <span class="text-accent">KeshavSoft</span></h1>
+      <p class="lead">Kickstart your career with real-world software development experience.</p>
+      <a href="about.html" class="btn btn-accent btn-lg">Learn More</a>
+    </div>
+  </main>
+  <!-- Coding Challenge Section -->
+<section id="codingChallenge" class="challenge-section text-center text-white d-flex align-items-center justify-content-center">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <h2 class="mb-4 text-warning display-5">Test Your Coding Skills</h2>
+    <p class="mb-4" style="opacity: 0.85; font-size: 1.1rem;">
+      Think you’ve got what it takes? Try our mini coding challenge and show off your skills!
+    </p>
+    <a href="coding_challenge.html" class="btn btn-accent btn-lg">Start Challenge</a>
+  </div>
+</section>
+
+  
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KeshavSoft. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Trigger the elegant page transition on load
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const challenge = document.querySelector('.challenge-section');
+  
+      function onScroll() {
+        const sectionTop = challenge.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.85;
+  
+        if (sectionTop < triggerPoint) {
+          challenge.classList.add('visible');
+          window.removeEventListener('scroll', onScroll);
+        }
+      }
+  
+      window.addEventListener('scroll', onScroll);
+      onScroll(); // check once on load
+    });
+  </script>
+  
+</body>
+</html>

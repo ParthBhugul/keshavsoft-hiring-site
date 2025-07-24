@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Join KeshavSoft – Apply for developer roles, track applications, and take coding challenges.">
+<meta name="author" content="Parth Bhugul">
+
+  <title>About – KeshavSoft</title>
+
+  <!-- Bootstrap & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --accent-color: #E8BB46;
+      --highlight-color: #7A4E2D;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      height: 100%;
+    }
+
+    body {
+      background: url('checkpattern.webp') center center / cover no-repeat;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.65);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      animation: fadeInBg 0.8s ease-in-out;
+    }
+
+    @keyframes fadeInBg {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .navbar {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar:hover {
+      background-color: var(--highlight-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: var(--accent-color);
+      transition: width 0.4s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: var(--accent-color);
+    }
+
+    h1, h2 {
+      color: var(--accent-color);
+    }
+
+    .content-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content-wrapper {
+      max-width: 800px;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">KeshavSoft</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="recruitment.html">Recruitment</a></li>
+          <li class="nav-item"><a class="nav-link" href="#codingChallenge">Coding Challenge</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <section class="py-5 bg-dark text-white">
+    <div class="container">
+      <h2 class="text-accent mb-4">About KeshavSoft</h2>
+  
+      <p class="lead">
+        At <strong>KeshavSoft</strong>, we are a technology-driven software development company dedicated to delivering innovative, scalable, and reliable digital solutions. Founded by passionate engineers, we bring together creativity, logic, and modern tools to empower businesses and enhance user experiences.
+      </p>
+  
+      <p>
+        Our team comprises enthusiastic developers, designers, and problem-solvers who believe in turning complex challenges into simple, intuitive applications. From startups to enterprises, we collaborate closely with our clients to understand their goals and build tailor-made software that aligns with their business vision.
+      </p>
+  
+      <p>
+        We specialize in full-stack web development, mobile applications, cloud integration, and AI-powered tools. Our culture promotes continuous learning, innovation, and a drive for excellence. Every line of code we write aims to deliver performance, security, and value.
+      </p>
+  
+      <p>
+        As a company focused on quality and user satisfaction, we follow agile methodologies, modern UI/UX principles, and strict testing practices. We are proud of our transparent communication, timely delivery, and long-term client relationships.
+      </p>
+  
+      <p>
+        Whether you're a fresher looking to start your tech journey or a business seeking digital transformation, <strong>KeshavSoft</strong> is your trusted partner for software success.
+      </p>
+  
+      <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.1);" />
+  
+      <h4 class="text-accent">Why Choose Us?</h4>
+      <ul class="list-unstyled ms-3">
+        <li><span style="color: #E8BB46;">✔</span> Innovative, scalable, and efficient solutions</li>
+        <li><span style="color: #E8BB46;">✔</span> Strong focus on clean code and performance</li>
+        <li><span style="color: #E8BB46;">✔</span> Dedicated team of skilled developers and designers</li>
+        <li><span style="color: #E8BB46;">✔</span> Agile development methodology with transparent workflow</li>
+        <li><span style="color: #E8BB46;">✔</span> Emphasis on continuous learning and R&D</li>
+        <li><span style="color: #E8BB46;">✔</span> Commitment to client satisfaction and long-term success</li>
+      </ul>
+      
+      
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KeshavSoft. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
